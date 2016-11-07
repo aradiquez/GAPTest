@@ -1,0 +1,39 @@
+<p id="notice" class="bg-success"><%= notice %></p>
+
+<div class="row">
+  <H2><%= @person.full_name %> <%= link_to 'Edit', edit_person_path(@person), class: 'btn btn-warning pull-right btn-lg' %></h2>
+  <hr/>
+  <div class="col-md-3">
+    <%= image_tag(image_url(@person.picture), class: 'img-responsive img-circle') %>
+  </div>
+
+  <div class="col-md-9">
+    <p>
+      <strong>Email:</strong>
+      <%= @person.email %>
+    </p>
+
+    <p>
+      <strong>Job:</strong>
+      <%= @person.job %>
+    </p>
+    <p>
+      <strong>Gender:</strong>
+      <%= Person::GENDERS[@person.gender] %>
+    </p>
+
+    <p>
+      <strong>Birthdate:</strong>
+      <%= @person.birthdate ? @person.birthdate.strftime('%Y-%m-%d') : 'No birthdate :\'(' %>
+    </p>
+
+    <p>
+      <strong>Bio:</strong>
+      <%= @person.bio %>
+    </p>
+  </div>
+
+
+</div>
+<br/>
+<%= link_to 'Back', people_path, class: 'btn btn-primary ' %>

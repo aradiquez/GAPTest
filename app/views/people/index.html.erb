@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Listing People</h2>
+
+<div class='row'>
+  <div class="col-md-9"></div>
+  <div class="col-md-3">
+    <%= link_to 'Add New Person', new_person_path, class: 'btn btn-success btn-lg', role: 'button'  %>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First name &amp; Last name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Delete button</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= link_to person.full_name, person %></td>
+        <td><%= person.email %></td>
+        <td><%= person.age %></td>
+        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', role: 'button' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

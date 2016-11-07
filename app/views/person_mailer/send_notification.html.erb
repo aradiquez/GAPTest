@@ -1,0 +1,12 @@
+<p>Hello <%=@send_to.full_name%></p>
+
+<p>Please notice that <strong><%=@recipient.first_name%> <%=@recipient.last_name%></strong> has <strong><%= @new_record ? 'joined' : 'left' %></strong> the application.</p>
+
+<% if @new_record %>
+  <p>Let's give him/her a warmth welcome :)</p>
+<% else %>
+  <p><strong>Please erase all trace of him/her!! We never meet!! ok ? !!! GOOD !!</strong></p>
+<% end %>
+
+<p>Regards,<br/>
+People System</p>
