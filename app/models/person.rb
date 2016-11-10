@@ -34,7 +34,6 @@ class Person < ActiveRecord::Base
     [first_name, last_name].join(' ')
   end
 
-
   private
 
   def is_valid_birthday?
