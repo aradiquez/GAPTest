@@ -4,8 +4,7 @@ FactoryGirl.define do
     first_name "Test"
     last_name "User"
     birthdate '02/10/1945'
-
-    # user with role 'teachstone_admin'
+    
     factory :person2 do
       email "testuser@example.com"
       first_name "Test"
