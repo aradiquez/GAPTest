@@ -1,4 +1,4 @@
-Programation Test GAP
+Programation Test GAP [![Build Status](https://travis-ci.org/aradiquez/GAPTest.svg?branch=master)](https://travis-ci.org/aradiquez/GAPTest)
 ----------------------------------------------
 
 This is a really simple code to be able to CRUD People from DB, this code also send an email to all people in the DB when a new people is create, and send a new email when a person is deleted to all people in db as well, this emails sending is async so happens in a background process using resque, the styles are from bootstrap and some custom for the profile.
