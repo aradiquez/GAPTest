@@ -1,14 +1,13 @@
-language:
-- ruby
+language: ruby
+rvm:
+  - 2.2.5
 dist: trusty
 sudo: required
+branches:
+  only:
+    - master
 services:
-- redis
-before_script:
-- "./script/ci-setup.sh"
-- date
+  - redis-server
+  - mysql
 script:
-- "./script/ci-test.sh"
-env:
-  matrix:
-  - TASK="rake test"
+  - "./script/ci-test.sh"
